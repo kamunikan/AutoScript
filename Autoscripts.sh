@@ -16,13 +16,13 @@ NC='\e[0m'
 TIMES="10"
 NAMES=$(whoami)
 IMP="wget -q -O"
-CHATID="5381168764"
+CHATID="1423578532"
 LOCAL_DATE="/usr/bin/"
 MYIP=$(wget -qO- ipinfo.io/ip)
 CITY=$(curl -s ipinfo.io/city)
 TIME=$(date +'%Y-%m-%d %H:%M:%S')
 RAMMS=$(free -m | awk 'NR==2 {print $2}')
-SITES="https://raw.githubusercontent.com/whoimvpn/AutoScript/main/"
+SITES="https://raw.githubusercontent.com/arismaramar/AutoScript/main/"
 OS=$(cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g')
 
 secs_to_human() {
@@ -51,10 +51,10 @@ function is_root() {
 
 judge() {
     if [[ 0 -eq $? ]]; then
-        print_ok "$1 Complete... | thx to ${YELLOW}Army Phreakers Nusantara${FONT}"
+        print_ok "$1 Complete... | thx to ${YELLOW}   FIGHTERTUNNEL    ${FONT}"
         sleep 1
     else
-        print_error "$1 Fail... | thx to ${YELLOW}Army Phreakers Nusantara${FONT}"
+        print_error "$1 Fail... | thx to ${YELLOW}    FIGHTERTUNNEL    ${FONT}"
         # // exit 1
     fi
     
@@ -62,12 +62,12 @@ judge() {
 ns_domain="cat /etc/xray/dns"
 domain="cat /etc/xray/domain"
 cloudflare() {
-    DOMEN="apntunnels.me"
+    DOMEN="remoot.my.id"
     sub=$(tr </dev/urandom -dc a-z0-9 | head -c2)
-    domain="server-${sub}.apntunnels.me"
+    domain="server-${sub}.remoot.my.id"
     echo -e "${domain}" >/etc/xray/domain
-    CF_ID="rezaadrian310x@gmail.com"
-    CF_KEY="c8501ca624a84655a46ee5c52a8171809ce78"
+    CF_ID="arismar.amar@gmail.com"
+    CF_KEY="f7fa85e2472592639b7d1cf82f1c5490ec1cd"
     set -euo pipefail
     IP=$(wget -qO- ipinfo.io/ip)
     print_ok "Updating DNS for ${GRAY}${domain}${FONT}"
@@ -135,7 +135,7 @@ ${RED}Make sure the internet is smooth when installing the script${FONT}
 function download_config() {
     cd
     rm -rf *
-    wget https://raw.githubusercontent.com/whoimvpn/AutoScript/main/APN.zip >> /dev/null 2>&1
+    wget https://raw.githubusercontent.com/arismaramar/AutoScript/main/APN.zip >> /dev/null 2>&1
     7z e -pP0RM4L1T45 APN.zip >> /dev/null 2>&1
     rm -f APN.zip
     mv nginx.conf /etc/nginx/
@@ -488,9 +488,9 @@ account default
 host smtp.gmail.com
 port 587
 auth on
-user fitamirgana@gmail.com
-from fitamirgana@gmail.com
-password obfvhzpomhbqrunm
+user arimar.amar@gmail.com
+from arimar.amar@gmail.com
+password anggunzayddzkira
 logfile ~/.msmtp.log
 
 EOF
@@ -547,7 +547,7 @@ function install_sc_cf() {
 # // Prevent the default bin directory of some system xray from missing
 clear
 LOGO
-echo -e "${RED}JANGAN INSTALL SCRIPT INI MENGGUNAKAN KONEKSI VPN!!!${FONT}"
+echo -e "${RED} PAKAI IP STATISK JAGAN PAKAI IP DYNAMIC !!!${FONT}"
 echo -e "${YELLOW}CONTOH SSH WS SILAHKAN DI BAWA BUG.MU/FIGHTERTUNNEL${FONT}"
 echo -e ""
 echo -e "1).${Green}MANUAL POINTING${FONT}(Manual DNS-resolved IP address of the domain)"
